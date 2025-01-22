@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anu Priya P - Personal Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #333 30%, #666 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Interests Section */
+        .interests {
+            padding: 100px 0;
+            background: #f9f9f9;
+        }
+
+        .interests h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .interest-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .contact-links a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            background: #333;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .interests-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Anu Priya P</h1>
+                <p>Engineering Student | Literature Enthusiast | Creative Mind</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm currently pursuing my engineering degree at Jyothi Engineering College. With a passion for literature and helping others, I combine technical knowledge with creative thinking. My strengths include strong communication, leadership abilities, flexibility, emotional intelligence, and sociability.</p>
+        </div>
+    </section>
+
+    <section class="interests">
+        <div class="container">
+            <h2>Interests & Skills</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <h3>Literature</h3>
+                    <p>Passionate about writing and reading, exploring different genres and styles.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Fashion</h3>
+                    <p>Keen interest in fashion trends and personal style expression.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Music</h3>
+                    <p>Music enthusiast with appreciation for various genres.</p>
+                </div>
+                <div class="interest-card">
+                    <h3>Leadership</h3>
+                    <p>Experience in leading teams and organizing events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-links">
+                <a href="mailto:anupriyapoolakkal962@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/AnupriyaP" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
