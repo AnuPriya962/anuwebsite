@@ -15,6 +15,7 @@
         body {
             line-height: 1.6;
             color: #333;
+            background-color: #f6eff7; /* Light pastel purple */
         }
 
         .container {
@@ -23,51 +24,86 @@
             padding: 0 20px;
         }
 
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #e6d4f0 0%, #f5effb 100%);
             display: flex;
             align-items: center;
+            justify-content: center;
+            text-align: center;
             padding: 50px 0;
+        }
+
+        .hero-content {
+            animation: fadeIn 1.5s ease-out;
         }
 
         .hero-content h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            background: linear-gradient(45deg, #333 30%, #666 90%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #5a2971; /* Deep pastel purple */
         }
 
         .hero-content p {
             font-size: 1.2rem;
             margin-bottom: 30px;
-            color: #555;
+            color: #704d88; /* Medium pastel purple */
         }
 
         /* About Section */
         .about {
             padding: 100px 0;
             background: #fff;
+            background-image: url('https://www.transparenttextures.com/patterns/circles.png'); /* Subtle floral texture */
         }
 
         .about h2 {
             font-size: 2.5rem;
             margin-bottom: 30px;
             text-align: center;
+            color: #5a2971;
+        }
+
+        .about p {
+            color: #704d88;
+            line-height: 1.8;
         }
 
         /* Interests Section */
         .interests {
             padding: 100px 0;
-            background: #f9f9f9;
+            background: #f3e4f7; /* Light pastel lavender */
         }
 
         .interests h2 {
             font-size: 2.5rem;
             margin-bottom: 30px;
             text-align: center;
+            color: #5a2971;
         }
 
         .interests-grid {
@@ -83,22 +119,54 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            opacity: 0; /* Hidden initially */
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .interest-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .interest-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .interest-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .interest-card:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .interest-card:nth-child(5) {
+            animation-delay: 1s;
         }
 
         .interest-card:hover {
             transform: translateY(-5px);
         }
 
+        .interest-card h3 {
+            color: #5a2971;
+        }
+
+        .interest-card p {
+            color: #704d88;
+        }
+
         /* Contact Section */
         .contact {
             padding: 100px 0;
-            background: #fff;
+            background: linear-gradient(135deg, #e6d4f0 0%, #f5effb 100%);
+            text-align: center;
         }
 
         .contact h2 {
             font-size: 2.5rem;
             margin-bottom: 30px;
-            text-align: center;
+            color: #5a2971;
+            animation: slideIn 1s ease-out;
         }
 
         .contact-links {
@@ -106,20 +174,33 @@
             justify-content: center;
             gap: 30px;
             margin-top: 30px;
+            animation: fadeIn 1.2s ease-out;
         }
 
         .contact-links a {
-            color: #333;
+            color: #5a2971;
             text-decoration: none;
             padding: 10px 20px;
-            border: 2px solid #333;
+            border: 2px solid #5a2971;
             border-radius: 5px;
             transition: all 0.3s ease;
         }
 
         .contact-links a:hover {
-            background: #333;
+            background: #5a2971;
             color: white;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #704d88;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
         }
 
         /* Responsive Design */
@@ -180,6 +261,10 @@
                     <h3>Leadership</h3>
                     <p>Experience in leading teams and organizing events.</p>
                 </div>
+                <div class="interest-card">
+                    <h3>Linguistics</h3>
+                    <p>I am fluent in Malayalam, Tamil, Hindi, and English. Currently, I am learning Korean and Italian to broaden my linguistic horizons.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -193,5 +278,9 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <p>&copy; 2025 Anu Priya P. All rights reserved.</p>
+    </footer>
 </body>
 </html>
